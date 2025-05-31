@@ -5,6 +5,8 @@ const registration = async(req, res) =>{
     try{
         const{name, email, phone} = req.body;
 
+        console.log("BODY:", req.body);
+
         // simple validation
         if(!name || !email || !phone){
             return res.status(400).json({message: "all field are required"})
